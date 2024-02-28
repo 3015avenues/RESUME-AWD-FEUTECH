@@ -1,0 +1,231 @@
+:root {
+  --blue-light: #ff91b9;
+  --light-clay: #f5bedd;
+  --dark-clay: #d776a3;
+  --light-dark: #dd1d70;
+  --lightBtn: #FE016C;
+  --lightBg: #fffefe;
+  --lightColor: #232323;
+}
+
+html{
+  background: var(--lightBgh);
+}
+
+html[data-theme='dark'] {
+  background: var(--lightBgh);
+ --lightBtn: #FFBD07;
+ --lightBgh: #232323;
+ --lightColor: #ffdbdb;
+}
+
+h1 {
+ font-family: 'Poppins', sans-serif;
+ font-weight: 300;
+ color: var(--lightColor);
+}
+
+input[type=checkbox] {
+ height: 0;
+ width: 0;
+ visibility: hidden;
+}
+
+label {
+ cursor: pointer;
+ text-indent: -9999px;
+ width: 55px;
+ height: 30px;
+ background: var(--lightBtn);
+ margin: 0 auto;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ -webkit-border-radius: 100px;
+ -moz-border-radius: 100px;
+ border-radius: 100px;
+ position: relative;
+}
+
+label:after {
+ content: '';
+ background: #fff;
+ width: 20px;
+ height: 20px;
+ -webkit-border-radius: 50%;
+ -moz-border-radius: 50%;
+ border-radius: 50%;
+ position: absolute;
+ top: 5px;
+ left: 4px;
+transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 320ms;
+}
+
+input:checked + label {
+ background: #FFBD07;
+}
+
+input:checked + label:after {
+ left: calc(100% - 5px);
+ -webkit-transform: translateX(-100%);
+ -moz-transform: translateX(-100%);
+ -ms-transform: translateX(-100%);
+ -o-transform: translateX(-100%);
+ transform: translateX(-100%);
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+ transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 420ms!important;
+ transition-delay: 0!important;
+}
+
+
+.container {
+  padding: 40px 80px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  margin: 40px 0;
+}
+
+.set1 {
+  padding: 20px;
+}
+
+.set2 {
+  width: 400px;
+  background-color: #f1f1f1;
+  border-radius: 20px;
+  padding: 42px 32px;
+  z-index: -2;
+}
+
+.set1 {
+  text-align: center;
+}
+
+img {
+  width: 200px;
+  border-radius: 50%;
+  background-color: var(--light-clay);
+  border: 16px solid var(--dark-clay);
+}
+
+.std-name {
+  background-color: var(--dark-clay);
+  color: #fff;
+  padding: 68px 36px 40px;
+  border-radius: 16px;
+  margin-top: -86px;
+}
+
+.std-name h2 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 12x;
+  font-weight: 300;
+}
+
+h1,
+h4 {
+  padding: 0;
+  margin: 0;
+}
+
+.contact {
+  background-color: var(--light-clay);
+  border-radius: 0 0 20px 20px;
+  margin-top: -20px;
+  padding-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  text-align: left;
+}
+
+.contact ul {
+  padding: 20px;
+  margin-top: 0;
+}
+
+.contact ul li {
+  line-height: 2.5;
+  color: #fff;
+  padding: 0 14px;
+}
+
+.contact ul li i {
+  padding-right: 10px;
+  font-size: 18px;
+  color: #fff
+}
+
+h1,
+h4,
+.title {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.set1 .title::after {
+  content: "";
+  border-radius: 20px;
+  background-color: var(--light-clay);
+  height: 28px;
+  position: relative;
+  left: 20px;
+  z-index: -1;
+  top: -18px;
+  width: 250px;
+  display: block;
+  opacity: 0.4;
+}
+
+h2.title {
+  margin-bottom: 0;
+}
+
+.reference ul li {
+  line-height: 2.5;
+}
+
+.set2 .title::after {
+  content: "";
+  border-radius: 20px;
+  background-color: var(--light-clay);
+  height: 28px;
+  position: relative;
+  z-index: -1;
+  top: -18px;
+  width: 200px;
+  display: block;
+  opacity: 0.4;
+}
+
+.skills ul li {
+  line-height: 2.5;
+}
+
+.edu-details {
+  display: flex;
+}
+
+.edu-year {
+  width: 40%;
+}
+
+.edu-des {
+  width: 60%;
+}
+
+p {
+  font-size: 14px;
+}
